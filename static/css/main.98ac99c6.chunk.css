@@ -1,2 +1,0 @@
-@import url(https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap);*{margin:0;padding:0;font-family:"Sunflower",sans-serif}li{list-style:none}nav{display:flex;justify-content:space-between;align-items:center;height:3rem;border:1px solid red}nav>h1{margin-left:1rem}nav>ul{display:flex;align-items:center;height:100%}nav>ul>li{width:6rem;text-align:center}
-/*# sourceMappingURL=main.98ac99c6.chunk.css.map */

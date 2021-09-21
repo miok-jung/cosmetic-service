@@ -1,11 +1,12 @@
-import React from "react";
-import Navigation from "components/Navigation";
+import React from 'react';
+import Navigation from 'components/Navigation';
+import AutoSlide from 'components/main/AutoSlide';
 
 const Home = () => {
   return (
     <div>
       <Navigation />
-      Home
+      <AutoSlide />
     </div>
   );
 };

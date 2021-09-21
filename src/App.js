@@ -1,13 +1,15 @@
-import { Route } from "react-router";
-import About from "./About";
-import Home from "./Home";
+import { Route, Switch } from 'react-router';
+import About from './About';
+import Home from './Home';
+import NotFound from 'components/NotFound';
 
 const App = () => {
   return (
-    <div>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route path="*" component={NotFound} />
+    </Switch>
   );
 };
 

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cosmetic-service/static/css/main.dcfede96.chunk.css",
-    "main.js": "/cosmetic-service/static/js/main.e8ed49e6.chunk.js",
-    "main.js.map": "/cosmetic-service/static/js/main.e8ed49e6.chunk.js.map",
+    "main.js": "/cosmetic-service/static/js/main.ee985704.chunk.js",
+    "main.js.map": "/cosmetic-service/static/js/main.ee985704.chunk.js.map",
     "runtime-main.js": "/cosmetic-service/static/js/runtime-main.31d69447.js",
     "runtime-main.js.map": "/cosmetic-service/static/js/runtime-main.31d69447.js.map",
     "static/js/2.f2307209.chunk.js": "/cosmetic-service/static/js/2.f2307209.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.31d69447.js",
     "static/js/2.f2307209.chunk.js",
     "static/css/main.dcfede96.chunk.css",
-    "static/js/main.e8ed49e6.chunk.js"
+    "static/js/main.ee985704.chunk.js"
   ]
 }

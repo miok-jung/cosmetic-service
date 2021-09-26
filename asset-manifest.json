@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/cosmetic-service/static/css/main.dcfede96.chunk.css",
-    "main.js": "/cosmetic-service/static/js/main.017a3b4f.chunk.js",
-    "main.js.map": "/cosmetic-service/static/js/main.017a3b4f.chunk.js.map",
-    "runtime-main.js": "/cosmetic-service/static/js/runtime-main.31d69447.js",
-    "runtime-main.js.map": "/cosmetic-service/static/js/runtime-main.31d69447.js.map",
-    "static/js/2.fe6c2502.chunk.js": "/cosmetic-service/static/js/2.fe6c2502.chunk.js",
-    "static/js/2.fe6c2502.chunk.js.map": "/cosmetic-service/static/js/2.fe6c2502.chunk.js.map",
-    "static/js/3.1fda76af.chunk.js": "/cosmetic-service/static/js/3.1fda76af.chunk.js",
-    "static/js/3.1fda76af.chunk.js.map": "/cosmetic-service/static/js/3.1fda76af.chunk.js.map",
+    "main.css": "/cosmetic-service/static/css/main.34b5c61d.chunk.css",
+    "main.js": "/cosmetic-service/static/js/main.a2f2c9c3.chunk.js",
+    "main.js.map": "/cosmetic-service/static/js/main.a2f2c9c3.chunk.js.map",
+    "runtime-main.js": "/cosmetic-service/static/js/runtime-main.45349df3.js",
+    "runtime-main.js.map": "/cosmetic-service/static/js/runtime-main.45349df3.js.map",
+    "static/js/2.86ac484f.chunk.js": "/cosmetic-service/static/js/2.86ac484f.chunk.js",
+    "static/js/2.86ac484f.chunk.js.map": "/cosmetic-service/static/js/2.86ac484f.chunk.js.map",
+    "static/js/3.b475f0eb.chunk.js": "/cosmetic-service/static/js/3.b475f0eb.chunk.js",
+    "static/js/3.b475f0eb.chunk.js.map": "/cosmetic-service/static/js/3.b475f0eb.chunk.js.map",
     "index.html": "/cosmetic-service/index.html",
-    "static/css/main.dcfede96.chunk.css.map": "/cosmetic-service/static/css/main.dcfede96.chunk.css.map",
-    "static/js/2.fe6c2502.chunk.js.LICENSE.txt": "/cosmetic-service/static/js/2.fe6c2502.chunk.js.LICENSE.txt",
+    "static/css/main.34b5c61d.chunk.css.map": "/cosmetic-service/static/css/main.34b5c61d.chunk.css.map",
+    "static/js/2.86ac484f.chunk.js.LICENSE.txt": "/cosmetic-service/static/js/2.86ac484f.chunk.js.LICENSE.txt",
     "static/media/slide1.cb95b48c.jpg": "/cosmetic-service/static/media/slide1.cb95b48c.jpg",
     "static/media/slide2.79fb754d.jpg": "/cosmetic-service/static/media/slide2.79fb754d.jpg",
     "static/media/slide3.972c3448.jpg": "/cosmetic-service/static/media/slide3.972c3448.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.31d69447.js",
-    "static/js/2.fe6c2502.chunk.js",
-    "static/css/main.dcfede96.chunk.css",
-    "static/js/main.017a3b4f.chunk.js"
+    "static/js/runtime-main.45349df3.js",
+    "static/js/2.86ac484f.chunk.js",
+    "static/css/main.34b5c61d.chunk.css",
+    "static/js/main.a2f2c9c3.chunk.js"
   ]
 }

@@ -3,7 +3,7 @@ import img1 from 'styles/images/main/slide1.jpg';
 import img2 from 'styles/images/main/slide2.jpg';
 import img3 from 'styles/images/main/slide3.jpg';
 import { FcLike } from 'react-icons/fc';
-import 'styles/hotissue.scss';
+import 'styles/container1.scss';
 
 const Container1 = () => {
   const dummy = [

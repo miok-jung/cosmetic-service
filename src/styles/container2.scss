@@ -1,0 +1,44 @@
+article {
+  padding: 5vw 10vh;
+  > h2 {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  > table {
+    border-spacing: 0;
+    width: 100%;
+    > thead {
+      > tr {
+        > th {
+          line-height: 3rem;
+          border-bottom: 1px solid #aaa;
+          font-size: 1.2rem;
+        }
+        > th:first-child {
+          width: 5%;
+        }
+        > th:nth-child(2) {
+          width: 70%;
+        }
+        > th:nth-child(3) {
+          width: 10%;
+        }
+        > th:nth-child(4) {
+          width: 10%;
+        }
+        > th:last-child {
+          width: 5%;
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        > td {
+          line-height: 2rem;
+          text-align: center;
+          border-top: 1px solid #aaa;
+        }
+      }
+    }
+  }
+}

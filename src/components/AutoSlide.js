@@ -3,18 +3,13 @@ import img1 from 'styles/images/main/slide1.jpg';
 import img2 from 'styles/images/main/slide2.jpg';
 import img3 from 'styles/images/main/slide3.jpg';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-
 import 'styles/autoslide.scss';
 
-// TODO 기능 LIST
-// 1. 자동 슬라이드
-// 2. 버튼 클릭시 슬라이드(완료)
-// 3. 클릭시 해당 상세페이지 이동
-// 4. mouseOver시 자동슬라이드 일시 멈춤 mouseout할 경우 다시 자동 슬라이드 추가()
-// 5. 하단 버튼 개수 보여주기(완료)
 const AutoSlide = () => {
   const [slide, setSlide] = useState(0);
   const slideRef = useRef(null);
+  const timeoutRef = useRef(null);
+  const delay = 2500;
 
   const images = [
     {
@@ -38,7 +33,24 @@ const AutoSlide = () => {
   ];
   useEffect(() => {
     slideRef.current.style.transform = `translateX(-${slide}00vw)`;
-  }, [slide]);
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setSlide(prevIndex =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+    return () => {
+      resetTimeout();
+    };
+  }, [slide, images.length]);
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
 
   const nextSlide = () => {
     if (slide >= images.length - 1) {
@@ -61,7 +73,7 @@ const AutoSlide = () => {
       return false;
     }
   };
-
+  // LINK AutoSlide : https://tinloof.com/blog/how-to-build-an-auto-play-slideshow-with-react/
   return (
     <header>
       <ul className="slide-wrap" ref={slideRef}>

@@ -3,7 +3,7 @@ import img1 from 'styles/images/main/slide1.jpg';
 import img2 from 'styles/images/main/slide2.jpg';
 import img3 from 'styles/images/main/slide3.jpg';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import 'styles/autoslide.scss';
+import 'styles/scss/autoslide.scss';
 
 const AutoSlide = () => {
   const [slide, setSlide] = useState(0);
@@ -35,10 +35,7 @@ const AutoSlide = () => {
     slideRef.current.style.transform = `translateX(-${slide}00vw)`;
     resetTimeout();
     timeoutRef.current = setTimeout(
-      () =>
-        setSlide(prevIndex =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        ),
+      () => setSlide(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1)),
       delay
     );
     return () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import board from 'dummy/board.json';
-import 'styles/container2.scss';
+import 'styles/scss/container2.scss';
 const Board = () => {
   return (
     <article>

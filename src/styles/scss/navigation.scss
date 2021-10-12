@@ -4,7 +4,17 @@ nav {
   align-items: center;
   height: 3rem;
   > h1 {
-    margin-left: 1rem;
+    display: flex;
+    height: 2.5rem;
+    > a {
+      display: flex;
+      align-items: center;
+      > img {
+        margin: 0 1rem 0 2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
   > ul {
     display: flex;

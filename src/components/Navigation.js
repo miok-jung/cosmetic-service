@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from 'styles/images/logo.svg';
-import 'styles/scss/navigation.scss';
+import 'styles/scss/common/navigation.scss';
 
 const Navigation = () => {
   return (

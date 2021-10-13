@@ -1,3 +1,4 @@
+@import 'styles/scss/common/mixins';
 .container1 {
   padding: 5vw 10vh;
   > h2 {
@@ -31,6 +32,40 @@
           text-overflow: ellipsis;
           white-space: nowrap;
         }
+      }
+    }
+  }
+}
+@include desktop {
+}
+
+@include tablet {
+  .container1 {
+    padding: 3vw 5vh;
+    > h2 {
+      margin-bottom: 2rem;
+    }
+    .hot-issue-wrap {
+      flex-wrap: wrap;
+      > li {
+        margin-bottom: 5vh;
+        width: 49%;
+      }
+    }
+  }
+}
+@include mobile {
+  .container1 {
+    padding: 3vw 5vh;
+    > h2 {
+      margin-bottom: 2rem;
+    }
+    .hot-issue-wrap {
+      flex-direction: column;
+      flex-wrap: wrap;
+      > li {
+        margin-bottom: 5vh;
+        width: 100%;
       }
     }
   }

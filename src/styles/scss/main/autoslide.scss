@@ -1,3 +1,4 @@
+@import 'styles/scss/common/mixins';
 header {
   position: relative;
   overflow-x: hidden;
@@ -69,4 +70,8 @@ header {
       background-color: #000;
     }
   }
+}
+@include tablet {
+}
+@include mobile {
 }

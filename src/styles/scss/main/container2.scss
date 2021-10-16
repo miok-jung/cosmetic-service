@@ -1,5 +1,7 @@
-article {
-  padding: 5vw 10vh;
+@import 'styles/scss/common/mixins';
+.container2 {
+  padding: #{$padding-desktop};
+  background: #f1f2f3;
   > h2 {
     font-size: 2rem;
     margin-bottom: 5rem;
@@ -18,13 +20,13 @@ article {
           width: 5%;
         }
         > th:nth-child(2) {
-          width: 70%;
+          width: 65%;
         }
         > th:nth-child(3) {
           width: 10%;
         }
         > th:nth-child(4) {
-          width: 10%;
+          width: 15%;
         }
         > th:last-child {
           width: 5%;
@@ -39,6 +41,22 @@ article {
           border-top: 1px solid #aaa;
         }
       }
+    }
+  }
+}
+@include tablet {
+  .container2 {
+    padding: #{$padding-tablet};
+    > h2 {
+      margin: 3rem 0 3rem;
+    }
+  }
+}
+@include mobile {
+  .container2 {
+    padding: #{$padding-mobile};
+    > h2 {
+      margin: 2rem 0 1rem;
     }
   }
 }

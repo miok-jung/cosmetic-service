@@ -3,7 +3,7 @@ import board from 'dummy/board.json';
 import 'styles/scss/main/container2.scss';
 const Board = () => {
   return (
-    <article>
+    <article className="container2">
       <h2>Hot Board</h2>
       <ul></ul>
       <table>

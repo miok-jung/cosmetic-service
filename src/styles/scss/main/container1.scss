@@ -1,9 +1,8 @@
 @import 'styles/scss/common/mixins';
 .container1 {
-  padding: 5vw 10vh;
+  padding: #{$padding-desktop};
   > h2 {
     font-size: 2rem;
-    margin-bottom: 5rem;
   }
   .hot-issue-wrap {
     display: flex;
@@ -26,6 +25,9 @@
           align-items: center;
           top: 0.7rem;
           right: 0;
+          > svg {
+            color: red;
+          }
         }
         > .hot-issue-content {
           overflow: hidden;
@@ -38,10 +40,7 @@
 }
 @include tablet {
   .container1 {
-    padding: 3vw 5vh;
-    > h2 {
-      margin-bottom: 2rem;
-    }
+    padding: #{$padding-tablet};
     .hot-issue-wrap {
       flex-wrap: wrap;
       > li {
@@ -53,10 +52,7 @@
 }
 @include mobile {
   .container1 {
-    padding: 3vw 5vh;
-    > h2 {
-      margin-bottom: 2rem;
-    }
+    padding: #{$padding-mobile};
     .hot-issue-wrap {
       flex-direction: column;
       flex-wrap: wrap;

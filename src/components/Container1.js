@@ -2,7 +2,7 @@ import React from 'react';
 import img1 from 'styles/images/main/slide1.jpg';
 import img2 from 'styles/images/main/slide2.jpg';
 import img3 from 'styles/images/main/slide3.jpg';
-import { FcLike } from 'react-icons/fc';
+import { FaHeart } from 'react-icons/fa';
 import 'styles/scss/main/container1.scss';
 
 const Container1 = () => {
@@ -12,7 +12,7 @@ const Container1 = () => {
       alt: '이미지에 대한 첫번째 설명이다.',
       link: '/cosmetic-service/1',
       title: '첫번째 인기 제목',
-      count: 159,
+      count: 29384,
       content: '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     },
     {
@@ -20,7 +20,7 @@ const Container1 = () => {
       alt: '이미지에 대한 두번째 설명이다.',
       link: '/cosmetic-service/2',
       title: '두번째 인기 제목',
-      count: 10293,
+      count: 3049,
       content: '2. Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     },
     {
@@ -28,7 +28,7 @@ const Container1 = () => {
       alt: '이미지에 대한 세번째 설명이다.',
       link: '/cosmetic-service/3',
       title: '세번째 인기 제목',
-      count: 101929395,
+      count: 452,
       content: '3. Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     },
     {
@@ -36,7 +36,7 @@ const Container1 = () => {
       alt: '이미지에 대한 네번째 설명이다.',
       link: '/cosmetic-service/4',
       title: '네번째 인기 제목',
-      count: 5,
+      count: 96,
       content: '4. Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     }
   ];
@@ -52,7 +52,8 @@ const Container1 = () => {
             <div className="image-content">
               <h3>{item.title}</h3>
               <p className="like-count">
-                <FcLike />
+                <FaHeart />
+                &nbsp;
                 {item.count.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
               </p>
               <p className="hot-issue-content">{item.content}</p>

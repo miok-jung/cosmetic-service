@@ -9,5 +9,13 @@ footer {
       width: 2rem;
       height: 2rem;
     }
+    > a {
+      height: 100%;
+      margin: 1%;
+      > svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
 }

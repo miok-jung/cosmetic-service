@@ -10,8 +10,3 @@
     @content;
   }
 }
-@mixin desktop {
-  @media (min-width: #{$breakpoint-tablet}) {
-    @content;
-  }
-}

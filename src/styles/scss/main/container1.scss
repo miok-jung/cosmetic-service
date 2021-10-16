@@ -1,71 +1,70 @@
 @import 'styles/scss/common/mixins';
 .container1 {
-  padding: 5vw 10vh;
-  > h2 {
+  padding: #{$padding-desktop};
+  h2 {
     font-size: 2rem;
     margin-bottom: 5rem;
   }
   .hot-issue-wrap {
     display: flex;
-    justify-content: space-between;
-    > li {
-      width: 23%;
-      > a {
-        > img {
+    flex-wrap: wrap;
+    li {
+      width: 24.25%;
+      margin-right: 1%;
+      a {
+        img {
           width: 100%;
         }
       }
-      > .image-content {
+      .image-content {
         position: relative;
-        > h3 {
+        h3 {
           line-height: 3rem;
         }
-        > .like-count {
+        .like-count {
           position: absolute;
           display: flex;
           align-items: center;
           top: 0.7rem;
           right: 0;
         }
-        > .hot-issue-content {
+        .hot-issue-content {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
       }
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
-@include desktop {
-}
-
 @include tablet {
   .container1 {
-    padding: 3vw 5vh;
-    > h2 {
-      margin-bottom: 2rem;
+    padding: #{$padding-tablet};
+    h2 {
+      margin: 3rem 0 3rem;
     }
     .hot-issue-wrap {
-      flex-wrap: wrap;
-      > li {
-        margin-bottom: 5vh;
+      li {
         width: 49%;
+        margin: 0 1% 4vh 0;
       }
     }
   }
 }
 @include mobile {
   .container1 {
-    padding: 3vw 5vh;
-    > h2 {
-      margin-bottom: 2rem;
+    padding: #{$padding-mobile};
+    h2 {
+      margin: 2rem 0 1rem;
     }
     .hot-issue-wrap {
-      flex-direction: column;
-      flex-wrap: wrap;
-      > li {
-        margin-bottom: 5vh;
+      li {
         width: 100%;
+        margin-right: 0;
+        margin: 0 1% 5vh 0;
       }
     }
   }

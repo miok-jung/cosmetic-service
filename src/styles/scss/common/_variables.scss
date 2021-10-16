@@ -1,0 +1,6 @@
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;
+// 언더바를 붙여 작성 -> 파일단위로 분리되어 컴파일이 되지 않는다.
+// 즉, 성능 및 관리 상의 이득을 얻을 수 있다?
+// TODO Why?

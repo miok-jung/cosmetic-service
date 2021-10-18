@@ -1,3 +1,4 @@
+@import 'styles/scss/common/mixins';
 nav {
   display: flex;
   justify-content: space-between;
@@ -16,13 +17,72 @@ nav {
       }
     }
   }
-  > ul {
+  .nav-wrap {
     display: flex;
     align-items: center;
     height: 100%;
     > li {
       width: 6rem;
       text-align: center;
+    }
+  }
+}
+@include tablet {
+}
+@include mobile {
+  nav {
+    > h1 {
+      > a {
+        > img {
+          margin: 0 1rem 0 1rem;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+    .mobile-wrap {
+      position: relative;
+      .mobile-nav {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+      }
+      .nav-wrap {
+        z-index: 1;
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        &::after {
+          content: '';
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          background: #f1f2f3;
+        }
+        > li {
+          z-index: 1;
+          width: 50%;
+          line-height: 4rem;
+          border-bottom: 1px solid #aaa;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+      .mobile-close {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 2;
+        color: #fff;
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 }

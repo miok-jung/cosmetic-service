@@ -29,7 +29,9 @@ const Navigation = () => {
           <li>menu1</li>
           <li>menu2</li>
           <li>menu3</li>
-          <li>menu4</li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       ) : (
         <div className="mobile-wrap">
@@ -40,7 +42,9 @@ const Navigation = () => {
             <li>menu1</li>
             <li>menu2</li>
             <li>menu3</li>
-            <li>menu4</li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </div>
       )}

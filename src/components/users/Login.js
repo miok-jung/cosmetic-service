@@ -4,16 +4,18 @@ import 'styles/scss/users/login.scss';
 const Login = () => {
   return (
     <article className="login-wrap">
-      <h2>Login</h2>
-      <div className="login-form-wrap">
+      <div className="login-inner-wrap">
+        <h2>로그인</h2>
         <form className="login-form">
-          <label>Login</label>
-          <input type="email" />
-          <label>Password</label>
-          <input type="password" />
-          <button>Login</button>
+          <input type="email" placeholder="example@example.com" />
+          <input type="password" placeholder="Password" />
+          <button type="submit" className="login-btn">
+            Login
+          </button>
         </form>
-        <div>Did you forget your information?</div>
+        {/* <div className="login-find-wrap">
+          <span>Find Password</span> | <span>Find email</span> | <span>Register</span>
+        </div> */}
       </div>
     </article>
   );

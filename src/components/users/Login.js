@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'styles/scss/users/login.scss';
 
 const Login = () => {
@@ -13,9 +14,13 @@ const Login = () => {
             Login
           </button>
         </form>
-        {/* <div className="login-find-wrap">
-          <span>Find Password</span> | <span>Find email</span> | <span>Register</span>
-        </div> */}
+        <div className="login-find-wrap">
+          <span>Find Password</span>
+          <span className="hidden">&nbsp;|&nbsp;</span>
+          <span>Find email</span>
+          <span className="hidden">&nbsp;|&nbsp;</span>
+          <Link to="/register">Register</Link>
+        </div>
       </div>
     </article>
   );

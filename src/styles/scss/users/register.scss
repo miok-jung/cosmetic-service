@@ -1,0 +1,39 @@
+@import 'styles/scss/common/mixins';
+.register-wrap {
+  width: 100%;
+  height: 100%;
+}
+.register-inner-wrap {
+  padding: 15vh 10vw;
+  background: #f1f2f3;
+  h2 {
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  label {
+    margin: 2vh 0 1vh;
+    width: 20vw;
+    text-align: center;
+  }
+  input {
+    padding-left: 1rem;
+    width: 15rem;
+    height: 2rem;
+    box-sizing: border-box;
+    border: 1px solid seagreen;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+  .register-btn {
+    width: 15rem;
+    height: 2rem;
+    background: #{$color-main};
+  }
+}

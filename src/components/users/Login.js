@@ -1,9 +1,10 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-// import users from 'dummy/user.json';
+import { useHistory, Link } from 'react-router-dom';
 import 'styles/scss/users/login.scss';
 
-const Login = props => {
+const Login = () => {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -14,19 +15,35 @@ const Login = props => {
     setPassword(e.currentTarget.value);
   };
   const onLogin = e => {
-    console.log('test');
     e.preventDefault();
-    // if (email === '' || password === '') {
-    //   alert('이메일 혹은 비밀번호를 입력해주세요.');
-    //   return false;
-    // }
-    // props.history('/');
+    axios
+      .post(
+        '/login',
+        {
+          email: email,
+          password: password
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      )
+      .then(res => {
+        if (res.data.success === true) {
+          alert(res.data.msg);
+          history.push('/');
+        } else {
+          alert(res.data.msg);
+        }
+      });
   };
+
   return (
     <article clstateme="login-wrap">
       <div className="login-inner-wrap">
         <h2>로그인</h2>
-        <form className="login-form">
+        <form className="login-form" onSubmit={onLogin}>
           <input
             type="email"
             placeholder="example@example.com"
@@ -39,7 +56,7 @@ const Login = props => {
             value={password}
             onChange={onPasswordHandler}
           />
-          <button type="submit" className="login-btn" onSubmit={onLogin}>
+          <button type="submit" className="login-btn">
             Login
           </button>
         </form>

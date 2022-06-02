@@ -1,0 +1,107 @@
+@import './variable';
+
+@include mobile {
+  header {
+    background-color: $light_pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    a {
+      display: inline-block;
+      h1 {
+        display: flex;
+        align-items: center;
+        img {
+          height: 2.5rem;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    .nav {
+      display: none;
+    }
+    .mobile_nav {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 1.5rem;
+      }
+    }
+  }
+}
+@include tablet {
+  header {
+    background-color: $light_pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    a {
+      display: inline-block;
+      h1 {
+        display: flex;
+        align-items: center;
+        img {
+          height: 2.5rem;
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      a {
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          background-color: $dark_light_pink;
+        }
+      }
+    }
+    .mobile_nav {
+      display: none;
+    }
+  }
+}
+@include desktop {
+  header {
+    background-color: $light_pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    a {
+      display: inline-block;
+      h1 {
+        display: flex;
+        align-items: center;
+        img {
+          height: 2.5rem;
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      a {
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          background-color: $dark_light_pink;
+        }
+      }
+    }
+    .mobile_nav {
+      display: none;
+    }
+  }
+}

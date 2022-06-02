@@ -10,3 +10,29 @@ $dark_green: #5b6d5b;
 $dark_pink: #ca8a8b;
 $dark_light_pink: #e2bcb7;
 $light_pink: #f6e6e4;
+
+// 반응형 화면 크기
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+// 767 이하
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// 768이상 1023이하
+@mixin tablet {
+  @media (min-width: ($mobile + 1)) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+// 1024이상
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}

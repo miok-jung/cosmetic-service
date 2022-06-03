@@ -2,13 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from 'img/logo.svg';
 import MenuBar from 'img/menuBar.svg';
+import CloseBtn from 'img/close.svg';
 import 'css/header.scss';
 
 const Header = () => {
   const MenuOpenBtn = (e) => {
     e.preventDefault();
-
-    console.log('CLICK');
+    const menuBtn = document.getElementsByClassName('mobile_nav_wrap');
+    menuBtn[0].classList.remove('hidden');
+  };
+  const CloseMenuBtn = (e) => {
+    e.preventDefault();
+    const menuBtn = document.getElementsByClassName('mobile_nav_wrap');
+    menuBtn[0].classList.add('hidden');
   };
   return (
     <header>
@@ -31,8 +37,18 @@ const Header = () => {
           }}
         />
         <div className="mobile_nav_wrap hidden">
-          <Link to="/board">게시판</Link>
-          <Link to="/login">로그인</Link>
+          <div className="mobile_nav_inner_wrap">
+            <img
+              src={CloseBtn}
+              alt="Menu Bar Close Button"
+              onClick={(e) => {
+                CloseMenuBtn(e);
+              }}
+            />
+            <p className="mobile_top_menu">전체 메뉴</p>
+            <Link to="/board">게시판</Link>
+            <Link to="/login">로그인</Link>
+          </div>
         </div>
       </nav>
     </header>

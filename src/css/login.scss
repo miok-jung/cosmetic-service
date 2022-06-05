@@ -1,0 +1,154 @@
+@import './variable';
+@include mobile {
+  .form_login,
+  .form_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    width: 90vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: $light_pink;
+    h2 {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    label {
+      margin: 1.5rem 0 0.5rem;
+      width: 90%;
+      font-size: 20px;
+    }
+    input {
+      padding-left: 0.5rem;
+      width: 90%;
+      height: 30px;
+      font-size: 25px;
+    }
+    button {
+      cursor: pointer;
+      margin: 2rem 0 1.5rem;
+      width: 50%;
+      height: 3rem;
+      border: none;
+      font-size: 1.5rem;
+      color: $light_pink;
+      background-color: $dark_pink;
+      &:hover {
+        background-color: $dark_green;
+      }
+    }
+    .btn_login,
+    .btn_register {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1.5rem;
+      &:hover {
+        background-color: $dark_light_pink;
+      }
+    }
+  }
+}
+@include tablet {
+  .form_login,
+  .form_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    width: 50vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: $light_pink;
+    h2 {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    label {
+      margin: 1.5rem 0 0.5rem;
+      width: 90%;
+      font-size: 20px;
+    }
+    input {
+      padding-left: 0.5rem;
+      width: 90%;
+      height: 30px;
+      font-size: 25px;
+    }
+    button {
+      cursor: pointer;
+      margin: 2rem 0 1.5rem;
+      width: 50%;
+      height: 3rem;
+      border: none;
+      font-size: 1.5rem;
+      color: $light_pink;
+      background-color: $dark_pink;
+      &:hover {
+        background-color: $dark_green;
+      }
+    }
+    .btn_login,
+    .btn_register {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1.5rem;
+      &:hover {
+        background-color: $dark_light_pink;
+      }
+    }
+  }
+}
+@include desktop {
+  .form_login,
+  .form_register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    width: 50vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: $light_pink;
+    h2 {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    label {
+      margin: 1.5rem 0 0.5rem;
+      width: 90%;
+      font-size: 20px;
+    }
+    input {
+      padding-left: 0.5rem;
+      width: 90%;
+      height: 30px;
+      font-size: 25px;
+    }
+    button {
+      cursor: pointer;
+      margin: 2rem 0 1.5rem;
+      width: 50%;
+      height: 3rem;
+      border: none;
+      font-size: 1.5rem;
+      color: $light_pink;
+      background-color: $dark_pink;
+      &:hover {
+        background-color: $dark_green;
+      }
+    }
+    .btn_login,
+    .btn_register {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1.5rem;
+      &:hover {
+        background-color: $dark_light_pink;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import 'css/_reset.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -11,8 +11,10 @@ import ReduxThunk from 'redux-thunk';
 import Reducer from '_reducers';
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <Provider
       store={createStoreWithMiddleware(
@@ -25,6 +27,5 @@ ReactDOM.render(
       </Router>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
 reportWebVitals();

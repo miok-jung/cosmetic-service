@@ -14,12 +14,12 @@ const Header = () => {
 
   const MenuOpenBtn = (e) => {
     e.preventDefault();
-    const menuBtn = document.getElementsByClassName('mobile_nav_wrap');
+    const menuBtn = document.getElementsByClassName('nav-mobile_wrap');
     menuBtn[0].classList.remove('hidden');
   };
   const CloseMenuBtn = (e) => {
     e.preventDefault();
-    const menuBtn = document.getElementsByClassName('mobile_nav_wrap');
+    const menuBtn = document.getElementsByClassName('nav-mobile_wrap');
     menuBtn[0].classList.add('hidden');
   };
 
@@ -59,7 +59,7 @@ const Header = () => {
             MenuOpenBtn(e);
           }}
         />
-        <div className="mobile_nav_wrap hidden">
+        <div className="nav-mobile_wrap hidden">
           <div className="mobile_nav_inner_wrap">
             <img
               src={CloseBtn}

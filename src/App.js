@@ -1,9 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from 'components/LandingPage';
-import BoardArea from 'components/board/BoardArea';
 import Register from 'components/users/Register';
 import Login from 'components/users/Login';
+import List from 'components/board/List';
+import Upload from 'components/board/Upload';
 import Auth from 'hoc/auth';
 
 const App = () => {
@@ -15,9 +16,10 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" exact element={Auth(LandingPage, null)} />
-      <Route path="/board" element={Auth(BoardArea, null)} />
       <Route path="/register" element={Auth(Register, false)} />
       <Route path="/login" element={Auth(Login, false)} />
+      <Route path="/board" element={Auth(List, null)} />
+      <Route path="/upload" element={Auth(Upload, true)} />
     </Routes>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavigationType, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Header from 'components/Header';
 import { loginUser } from '_actions/user_action';

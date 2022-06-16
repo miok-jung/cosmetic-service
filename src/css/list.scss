@@ -1,0 +1,72 @@
+@import './variable';
+
+// ANCHOR 모바일
+@include mobile {
+}
+
+// ANCHOR 타블렛
+@include tablet {
+}
+
+// ANCHOR 데스크탑
+@include desktop {
+  .board-list_wrap {
+    margin: 5rem auto 0;
+    padding-top: 5rem;
+    width: 50vw;
+    h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .board-popular {
+      border: 1px solid lime;
+    }
+    .board-recent {
+      margin: 2rem 0;
+      h3 {
+        margin: 2rem 0 1rem;
+      }
+      .board-recent_wrap {
+        display: flex;
+        justify-content: space-between;
+        .board-recent_list {
+          padding: 0.5rem;
+          width: 24%;
+          box-sizing: border-box;
+          border: 1px solid $dark_green;
+          h4 {
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          p {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+    .board-none {
+      display: flex;
+      justify-content: center;
+      margin: 3vh 0;
+    }
+    .btn-wrap {
+      display: flex;
+      justify-content: flex-end;
+      .board-btn {
+        border: 1px solid $dark_green;
+        padding: 0.5rem 1rem;
+        background-color: $dark_light_pink;
+
+        &:hover {
+          background-color: $dark_pink;
+          color: $light_pink;
+        }
+      }
+    }
+  }
+}

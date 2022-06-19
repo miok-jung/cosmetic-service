@@ -1,0 +1,25 @@
+@import './variable';
+// FIXME 모바일/타블렛 업데이트하기
+// ANCHOR 모바일
+@include mobile {
+}
+
+// ANCHOR 타블렛
+@include tablet {
+}
+
+// ANCHOR 데스크탑
+@include desktop {
+  .detail_wrap {
+    margin: 5rem auto 0;
+    padding-top: 5rem;
+    width: 50vw;
+    border: 1px solid red;
+    h3 {
+      font-size: 1.5rem;
+    }
+    .text-right {
+      text-align: right;
+    }
+  }
+}

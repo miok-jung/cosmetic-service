@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from 'components/Header';
+import Heart from 'img/heart.svg';
 import 'css/list.scss';
 
 const List = () => {
   const [Flag, setFlag] = useState(false);
   const [Lists, setLists] = useState([]);
-  const [ListCount, setListCount] = useState(0);
 
   useEffect(() => {
-    axios.get('/api/board/list').then((res) => {
+    axios.get(`/api/board/list/recent`).then((res) => {
       if (res.data.success) {
         if (res.data.boardList.length === 0) {
           setFlag(false);
@@ -19,8 +19,6 @@ const List = () => {
           setLists(res.data.boardList);
         }
       }
-
-      console.log('res', res);
     });
   }, []);
   return (
@@ -39,8 +37,14 @@ const List = () => {
               {Lists.map((list, index) => {
                 return (
                   <div className="board-recent_list" key={index}>
-                    <h4>{list.title}</h4>
-                    <p>{list.content}</p>
+                    <Link to={`/board/${list.boardNum}`}>
+                      <h4>{list.title}</h4>
+                      <section className="like">
+                        <img src={Heart} className="svg" />
+                        <spen>19k</spen>
+                      </section>
+                      <p>{list.content}</p>
+                    </Link>
                   </div>
                 );
               })}

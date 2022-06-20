@@ -1,5 +1,5 @@
 @import './variable';
-
+// FIXME 모바일/타블렛 업데이트하기
 // ANCHOR 모바일
 @include mobile {
 }
@@ -28,23 +28,42 @@
       }
       .board-recent_wrap {
         display: flex;
-        justify-content: space-between;
         .board-recent_list {
+          display: inline-block;
+          margin-right: calc(4% / 3);
           padding: 0.5rem;
           width: 24%;
-          box-sizing: border-box;
           border: 1px solid $dark_green;
-          h4 {
-            margin-bottom: 0.5rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+          &:last-child {
+            margin-right: 0;
           }
-          p {
-            display: -webkit-box;
-            overflow: hidden;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
+          a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
+            h4 {
+              margin-bottom: 0.5rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .like {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              .svg {
+                margin-right: 0.2rem;
+                width: 1rem;
+                height: 1rem;
+              }
+            }
+            p {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
           }
         }
       }

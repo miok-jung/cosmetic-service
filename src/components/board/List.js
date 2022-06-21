@@ -39,10 +39,10 @@ const List = () => {
                   <div className="board-recent_list" key={index}>
                     <Link to={`/board/${list.boardNum}`}>
                       <h4>{list.title}</h4>
-                      <section className="like">
+                      <p className="like">
                         <img src={Heart} className="svg" />
-                        <spen>19k</spen>
-                      </section>
+                        &nbsp;19k
+                      </p>
                       <p>{list.content}</p>
                     </Link>
                   </div>

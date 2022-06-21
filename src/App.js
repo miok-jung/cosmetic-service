@@ -5,7 +5,7 @@ import Register from 'components/users/Register';
 import Login from 'components/users/Login';
 import List from 'components/board/List';
 import Upload from 'components/board/Upload';
-import Detail from 'components/board/Detail';
+import BoardArea from 'components/board/BoardArea';
 import Auth from 'hoc/auth';
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
       <Route path="/register" element={Auth(Register, false)} />
       <Route path="/login" element={Auth(Login, false)} />
       <Route path="/board" element={Auth(List, null)} />
-      <Route path="/board/:boardNum" element={Auth(Detail, null)} />
+      <Route path="/board/:boardNum" element={Auth(BoardArea, null)} />
       <Route path="/upload" element={Auth(Upload, true)} />
     </Routes>
   );

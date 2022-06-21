@@ -3,36 +3,31 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Header from 'components/Header';
+import 'css/detail.scss';
+import dayjs from 'dayjs';
 
-const Detail = () => {
-  let params = useParams();
-  const [boardInfo, setBoardInfo] = useState({});
-  const user = useSelector((state) => state.user);
+const Detail = (props) => {
+  const [Day, setDay] = useState();
+
   useEffect(() => {
-    let body = {
-      boardNum: params.boardNum,
-    };
-    axios
-      .post('/api/board/detail', body)
-      .then((res) => {
-        if (res.data.success) {
-          setBoardInfo(res.data.board);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
+    let date = props.BoardInfo.date;
+    let week = ['일', '월', '화', '수', '목', '금', '토'];
+    setDay(
+      dayjs(date).format('YYYY년 MM월 DD일') +
+        ' ' +
+        week[dayjs(date).format('d')] +
+        '요일 ' +
+        dayjs(date).format('A hh:mm'),
+    );
+  });
   return (
-    <>
-      <Header />
-      <h3>{boardInfo.title}</h3>
-      <p>{boardInfo.content}</p>
-      <p>날짜 : {boardInfo.date}</p>
-      <p>덧글 총 갯수 : {boardInfo.repleNum}</p>
-      <p>작성자 : {boardInfo.author}</p>
-    </>
+    <div className="detail_wrap">
+      <h3>{props.BoardInfo.title}</h3>
+      <p className="text-right">작성자 : {props.BoardInfo.author.nickname}</p>
+      <p className="text-right">{Day}</p>
+      <pre>{props.BoardInfo.content}</pre>
+      <p>덧글 총 갯수 : {props.BoardInfo.repleNum}</p>
+    </div>
   );
 };
 

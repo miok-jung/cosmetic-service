@@ -16,6 +16,10 @@ $mobile: 767px;
 $tablet: 1023px;
 $desktop: 1024px;
 
+$mobile-width: 90vw;
+$tablet-width: 70vw;
+$desktop-width: 50vw;
+
 // 767 이하
 @mixin mobile {
   @media (max-width: $mobile) {

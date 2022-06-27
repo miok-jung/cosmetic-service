@@ -11,7 +11,7 @@
     margin: 0 auto;
     margin-top: 2rem;
     padding-bottom: 2rem;
-    width: 90vw;
+    width: $mobile-width;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: $light_pink;
     h2 {
@@ -63,7 +63,7 @@
     margin: 0 auto;
     margin-top: 5rem;
     padding-bottom: 2rem;
-    width: 50vw;
+    width: $tablet-width;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: $light_pink;
     h2 {
@@ -115,7 +115,7 @@
     margin: 0 auto;
     margin-top: 5rem;
     padding-bottom: 2rem;
-    width: 50vw;
+    width: $desktop-width;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: $light_pink;
     h2 {

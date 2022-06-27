@@ -2,29 +2,21 @@
 
 // ANCHOR 모바일
 @include mobile {
-}
-// ANCHOR 타블렛
-@include tablet {
-}
-// ANCHOR 데스크탑
-@include desktop {
   .board-wrap {
     display: flex;
     flex-direction: column;
     margin: 10vh auto 0;
     padding: 5vh 3vh;
-    width: 60vw;
+    width: $mobile-width;
     background-color: $light_pink;
     box-sizing: border-box;
     box-shadow: rgba(91, 109, 91, 0.3) 0px 1px 2px 0px, rgba(91, 109, 91, 0.15) 0px 1px 3px 1px;
-
     h2 {
       text-align: center;
       margin-bottom: 5vh;
     }
     form {
       padding: 5vh 3vh;
-      border: 1px solid red;
       label {
         display: block;
         margin: 1.5rem 0 0.5rem;
@@ -41,6 +33,195 @@
         border: 1px solid $dark_green;
         font-size: 1.5rem;
       }
+      //  파일 전용 CSS
+      .img_label {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: $dark_light_pink;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: $dark_pink;
+          color: $light_pink;
+        }
+      }
+      input[type='file'] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+      .upload_preview {
+        width: 100%;
+      } // END 파일 전용 CSS
+      textarea {
+        border: 1px solid $dark_green;
+        width: 100%;
+        height: 40vh;
+      }
+      .btn_wrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+        .submit {
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          background-color: $dark_light_pink;
+          border: none;
+          &:hover {
+            background-color: $dark_pink;
+            color: $light_pink;
+          }
+        }
+      }
+    }
+  }
+}
+// ANCHOR 타블렛
+@include tablet {
+  .board-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh auto 0;
+    padding: 5vh 3vh;
+    width: $tablet-width;
+    background-color: $light_pink;
+    box-sizing: border-box;
+    box-shadow: rgba(91, 109, 91, 0.3) 0px 1px 2px 0px, rgba(91, 109, 91, 0.15) 0px 1px 3px 1px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 5vh;
+    }
+    form {
+      padding: 5vh 3vh;
+      label {
+        display: block;
+        margin: 1.5rem 0 0.5rem;
+        font-size: 1.5rem;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      input {
+        padding-left: 0.5rem;
+        width: 100%;
+        height: 2rem;
+        box-sizing: border-box;
+        border: 1px solid $dark_green;
+        font-size: 1.5rem;
+      }
+      //  파일 전용 CSS
+      .img_label {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: $dark_light_pink;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: $dark_pink;
+          color: $light_pink;
+        }
+      }
+      input[type='file'] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+      .upload_preview {
+        width: 100%;
+      } // END 파일 전용 CSS
+      textarea {
+        border: 1px solid $dark_green;
+        width: 100%;
+        height: 40vh;
+      }
+      .btn_wrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+        .submit {
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          background-color: $dark_light_pink;
+          border: none;
+          &:hover {
+            background-color: $dark_pink;
+            color: $light_pink;
+          }
+        }
+      }
+    }
+  }
+}
+// ANCHOR 데스크탑
+@include desktop {
+  .board-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh auto 0;
+    padding: 5vh 3vh;
+    width: $desktop-width;
+    background-color: $light_pink;
+    box-sizing: border-box;
+    box-shadow: rgba(91, 109, 91, 0.3) 0px 1px 2px 0px, rgba(91, 109, 91, 0.15) 0px 1px 3px 1px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 5vh;
+    }
+    form {
+      padding: 5vh 3vh;
+      label {
+        display: block;
+        margin: 1.5rem 0 0.5rem;
+        font-size: 1.5rem;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      input {
+        padding-left: 0.5rem;
+        width: 100%;
+        height: 2rem;
+        box-sizing: border-box;
+        border: 1px solid $dark_green;
+        font-size: 1.5rem;
+      }
+      //  파일 전용 CSS
+      .img_label {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: $dark_light_pink;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: $dark_pink;
+          color: $light_pink;
+        }
+      }
+      input[type='file'] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+      .upload_preview {
+        width: 100%;
+      } // END 파일 전용 CSS
       textarea {
         border: 1px solid $dark_green;
         width: 100%;

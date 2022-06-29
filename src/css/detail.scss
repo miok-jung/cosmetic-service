@@ -2,21 +2,54 @@
 // FIXME 모바일/타블렛 업데이트하기
 // ANCHOR 모바일
 @include mobile {
+  .detail_wrap {
+    margin: 5rem auto 0;
+    padding: 3vh;
+    width: $mobile-width;
+    box-sizing: border-box;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    h3 {
+      font-size: 1.5rem;
+    }
+    .image_wrap {
+      margin: 2rem 0;
+      width: 100%;
+    }
+  }
 }
 
 // ANCHOR 타블렛
 @include tablet {
+  .detail_wrap {
+    margin: 5rem auto 0;
+    padding: 3vh;
+    width: $tablet-width;
+    box-sizing: border-box;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    h3 {
+      font-size: 1.5rem;
+    }
+    .image_wrap {
+      margin: 2rem 0;
+      width: 100%;
+    }
+  }
 }
 
 // ANCHOR 데스크탑
 @include desktop {
   .detail_wrap {
     margin: 5rem auto 0;
-    padding-top: 5rem;
-    width: 50vw;
-    border: 1px solid red;
+    padding: 3vh;
+    width: $desktop-width;
+    box-sizing: border-box;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     h3 {
       font-size: 1.5rem;
+    }
+    .image_wrap {
+      margin: 2rem 0;
+      width: 100%;
     }
   }
 }

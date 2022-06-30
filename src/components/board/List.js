@@ -1,26 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import Header from 'components/Header';
-import Heart from 'img/heart.svg';
-import 'css/list.scss';
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import Header from 'components/Header'
+import * as config from '../../config'
+import Heart from 'img/heart.svg'
+import 'css/list.scss'
 
 const List = () => {
-  const [Flag, setFlag] = useState(false);
-  const [Lists, setLists] = useState([]);
+  const [Flag, setFlag] = useState(false)
+  const [Lists, setLists] = useState([])
 
   useEffect(() => {
     axios.get(`/api/board/list/recent`).then((res) => {
+      console.log('res', res)
       if (res.data.success) {
         if (res.data.boardList.length === 0) {
-          setFlag(false);
+          setFlag(false)
         } else {
-          setFlag(true);
-          setLists(res.data.boardList);
+          setFlag(true)
+          setLists(res.data.boardList)
         }
       }
-    });
-  }, []);
+    })
+  }, [])
   return (
     <>
       <Header />
@@ -28,9 +30,10 @@ const List = () => {
         <div className="board-list_wrap">
           <h2>게시판</h2>
           <p>Total : {Lists.length}</p>
-          <section className="board-popular">
+          {/* FIXME 인기글 추가하기 */}
+          {/* <section className="board-popular">
             <h3>인기글</h3>
-          </section>
+          </section> */}
           <section className="board-recent">
             <h3>최신글</h3>
             <div className="board-recent_wrap">
@@ -39,6 +42,12 @@ const List = () => {
                   <div className="board-recent_list" key={index}>
                     <Link to={`/board/${list.boardNum}`}>
                       <h4>{list.title}</h4>
+                      {list.image === undefined ? (
+                        <span className="preview null">이미지없음</span>
+                      ) : (
+                        <img class="preview view" src={`${config.AWS_BOARD_URL}/${list.image}`} />
+                      )}
+
                       <p className="like">
                         <img src={Heart} className="svg" />
                         &nbsp;19k
@@ -46,7 +55,7 @@ const List = () => {
                       <p>{list.content}</p>
                     </Link>
                   </div>
-                );
+                )
               })}
             </div>
           </section>
@@ -68,7 +77,7 @@ const List = () => {
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default List;
+export default List

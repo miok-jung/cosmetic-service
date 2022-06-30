@@ -24,8 +24,13 @@ const Detail = (props) => {
       <h3>{props.BoardInfo.title}</h3>
       <p className="text-right">작성자 : {props.BoardInfo.author.nickname}</p>
       <p className="text-right">{Day}</p>
-      <img className="image_wrap" src={`${config.AWS_BOARD_URL}/${props.BoardInfo.image}`} />
-      <pre>{props.BoardInfo.content}</pre>
+      {props.BoardInfo.image === undefined ? (
+        <p className="null"> </p>
+      ) : (
+        <img className="image_wrap" src={`${config.AWS_BOARD_URL}/${props.BoardInfo.image}`} />
+      )}
+
+      <pre className="content-wrap">{props.BoardInfo.content}</pre>
       <p>덧글 총 갯수 : {props.BoardInfo.repleNum}</p>
       <div className="btn-wrap">
         <button>수정하기</button>

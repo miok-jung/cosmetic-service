@@ -13,7 +13,7 @@
   .board-list_wrap {
     margin: 5rem auto 0;
     padding-top: 5rem;
-    width: 50vw;
+    width: $desktop-width;
     h2 {
       margin-bottom: 2rem;
       text-align: center;
@@ -27,13 +27,14 @@
         margin: 2rem 0 1rem;
       }
       .board-recent_wrap {
-        display: flex;
         .board-recent_list {
           display: inline-block;
           margin-right: calc(4% / 3);
           padding: 0.5rem;
           width: 24%;
+          min-height: 15rem;
           border: 1px solid $dark_green;
+          box-sizing: border-box;
           &:last-child {
             margin-right: 0;
           }
@@ -47,6 +48,19 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
+            }
+            .preview {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 6rem;
+            }
+            .preview.view {
+              min-height: 6rem;
+            }
+            .preview.null {
+              background-color: $light_pink;
+              color: $dark_green;
             }
             .like {
               display: flex;

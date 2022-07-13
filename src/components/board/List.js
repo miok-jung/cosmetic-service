@@ -9,10 +9,18 @@ import 'css/list.scss'
 const List = () => {
   const [Flag, setFlag] = useState(false)
   const [Lists, setLists] = useState([])
+  const [Count, setCount] = useState(0)
 
   useEffect(() => {
+    axios
+      .get('/api/board/list')
+      .then((res) => {
+        setCount(res.data.boardList.length)
+      })
+      .catch((err) => {
+        return err
+      })
     axios.get(`/api/board/list/recent`).then((res) => {
-      console.log('res', res)
       if (res.data.success) {
         if (res.data.boardList.length === 0) {
           setFlag(false)
@@ -29,7 +37,11 @@ const List = () => {
       {Flag ? (
         <div className="board-list_wrap">
           <h2>게시판</h2>
-          <p>Total : {Lists.length}</p>
+          <div>
+            <p>Total : {Count}</p>
+            모든글보기
+          </div>
+
           {/* FIXME 인기글 추가하기 */}
           {/* <section className="board-popular">
             <h3>인기글</h3>

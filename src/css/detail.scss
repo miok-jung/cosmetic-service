@@ -30,5 +30,25 @@
       word-break: break-all;
       white-space: pre-line;
     }
+    .btn-wrap {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        cursor: pointer;
+        border: 1px solid $dark_pink;
+        padding: 0.5rem 1rem;
+        background-color: $light_pink;
+        &:first-child {
+          margin-right: 0.5rem;
+        }
+        &:last-child {
+          color: red;
+        }
+        &:hover {
+          background-color: $dark_pink;
+          color: $light_pink;
+        }
+      }
+    }
   }
 }

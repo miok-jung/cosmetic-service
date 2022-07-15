@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
@@ -15,6 +15,10 @@ const Upload = () => {
 
   const [File, setFile] = useState()
   const [Images, setImages] = useState()
+
+  // useEffect(() => {
+  //   console.log('user', user)
+  // }, [])
 
   const FileUpload = async (e) => {
     let formData = new FormData()
@@ -43,9 +47,9 @@ const Upload = () => {
       title: Title,
       content: Content,
       image: Images,
-      uid: user.uid,
+      uid: user,
     }
-
+    console.log('body', body)
     axios
       .post('/api/board/submit', body)
       .then((res) => {
@@ -55,6 +59,7 @@ const Upload = () => {
         } else {
           alert('글 작성에 실패하였습니다.')
         }
+        console.log(res)
       })
       .catch((err) => {
         console.log(err)

@@ -1,38 +1,42 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useCookies } from 'react-cookie';
-import Logo from 'img/logo.svg';
-import MenuBar from 'img/menuBar.svg';
-import CloseBtn from 'img/close.svg';
-import 'css/header.scss';
-import axios from 'axios';
+import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useCookies } from 'react-cookie'
+import Logo from 'img/logo.svg'
+import MenuBar from 'img/menuBar.svg'
+import CloseBtn from 'img/close.svg'
+import 'css/header.scss'
+import axios from 'axios'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
+  const user = useSelector((state) => state.user)
 
-  const [Token, setToken, removeToken] = useCookies('x_auth');
+  const [Token, setToken, removeToken] = useCookies('x_auth')
 
   const MenuOpenBtn = (e) => {
-    e.preventDefault();
-    const menuBtn = document.getElementsByClassName('nav-mobile_wrap');
-    menuBtn[0].classList.remove('hidden');
-  };
+    e.preventDefault()
+    const menuBtn = document.getElementsByClassName('nav-mobile_wrap')
+    menuBtn[0].classList.remove('hidden')
+  }
   const CloseMenuBtn = (e) => {
-    e.preventDefault();
-    const menuBtn = document.getElementsByClassName('nav-mobile_wrap');
-    menuBtn[0].classList.add('hidden');
-  };
+    e.preventDefault()
+    const menuBtn = document.getElementsByClassName('nav-mobile_wrap')
+    menuBtn[0].classList.add('hidden')
+  }
 
   const onClickLogout = () => {
-    axios.get('api/users/logout').then((res) => {
+    console.log('logoutClick', Token)
+    axios.get('/api/users/logout', Token).then((res) => {
       if (res.data.success) {
-        removeToken('x_auth');
-        navigate('/login');
+        removeToken('x_auth')
+        alert('로그아웃이 완료 되었습니다. 로그인 페이지로 넘어갑니다.')
+        navigate('/login')
       } else {
-        alert('로그아웃에 실패하였습니다.');
+        alert('로그아웃에 실패하였습니다.')
       }
-    });
-  };
+    })
+  }
   return (
     <header>
       <Link to="/">
@@ -56,7 +60,7 @@ const Header = () => {
           src={MenuBar}
           alt="Menu Bar Icon"
           onClick={(e) => {
-            MenuOpenBtn(e);
+            MenuOpenBtn(e)
           }}
         />
         <div className="nav-mobile_wrap hidden">
@@ -65,7 +69,7 @@ const Header = () => {
               src={CloseBtn}
               alt="Menu Bar Close Button"
               onClick={(e) => {
-                CloseMenuBtn(e);
+                CloseMenuBtn(e)
               }}
             />
             <p className="mobile_top_menu">전체 메뉴</p>
@@ -81,7 +85,7 @@ const Header = () => {
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

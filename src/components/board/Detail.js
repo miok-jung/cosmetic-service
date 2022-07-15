@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux'
 import dayjs from 'dayjs'
 import * as config from '../../config'
 import 'css/detail.scss'
+import { Link } from 'react-router-dom'
 
 const Detail = (props) => {
-  const [Day, setDay] = useState()
+  const [Day, setDay] = useState('')
   const user = useSelector((state) => state.user)
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Detail = (props) => {
         '요일 ' +
         dayjs(date).format('A hh:mm'),
     )
-  })
+  }, [props])
   return (
     <div className="detail_wrap">
       <h3>{props.BoardInfo.title}</h3>
@@ -32,10 +33,14 @@ const Detail = (props) => {
 
       <pre className="content-wrap">{props.BoardInfo.content}</pre>
       <p>덧글 총 갯수 : {props.BoardInfo.repleNum}</p>
-      <div className="btn-wrap">
-        <button>수정하기</button>
-        <button>삭제하기</button>
-      </div>
+      {user.userData._id === props.BoardInfo.author._id ? (
+        <div className="btn-wrap">
+          <button>
+            <Link to={'/edit'}>수정하기</Link>
+          </button>
+          <button>삭제하기</button>
+        </div>
+      ) : null}
     </div>
   )
 }
